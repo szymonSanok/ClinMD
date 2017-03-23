@@ -1,0 +1,139 @@
+.root{
+   -fx-background-color: #4baedd;
+}
+
+#login{
+    -fx-background-color: #4baedd;
+}
+.label{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    
+}
+
+
+
+#btnLogin{
+    -fx-background-color: #4baedd;
+    -fx-text-fill: white;
+    -fx-border-style: solid;
+    -fx-border-color: white;
+    -fx-padding: 5px 20px 5px 20px;
+    -fx-min-width: 150px;
+}
+
+
+#btnLogin:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #4baedd;
+    -fx-border-style: solid;
+    -fx-border-color: white;
+    -fx-padding: 5px 20px 5px 20px;
+    -fx-min-width: 150px;
+}
+#btnLogin:pressed{
+    -fx-background-color: #e7e7e7;
+    -fx-text-fill: #4baedd;
+    -fx-border-style: solid;
+    -fx-border-color: white;
+    -fx-padding: 5px 20px 5px 20px;
+    -fx-min-width: 150px;
+}
+
+#notification{
+    -fx-text-fill: red;
+}
+/*---PACJENT---*/
+#pacjent{
+    -fx-background-color: linear-gradient(from 0px 0px to 0px 300px, #0097de 0%, #0097de 40%, white 36.84%, white 100%);
+}
+
+#imgZar{
+    -fx-max-width:20px;
+    -fx-max-height:20px;
+}
+
+#btnPacjent{
+    -fx-pref-width: 280px;
+    -fx-background-color: white;
+    -fx-border-color: #f0efef;
+    -fx-border-style: solid;
+    -fx-border-width: 3px 0px 3px 0px;
+}
+
+#btnPacjent:hover{
+    -fx-pref-width: 280px;
+    -fx-background-color: #f0efef;
+    -fx-border-color: #f0efef;
+    -fx-border-style: solid;
+    -fx-border-width: 3px 0px 3px 0px;
+}
+
+#btnPacjent:pressed{
+    -fx-pref-width: 280px;
+    -fx-background-color: #e4e2e2;
+    -fx-border-color: #f0efef;
+    -fx-border-style: solid;
+    -fx-border-width: 3px 0px 3px 0px;
+}
+
+#avatar{
+    -fx-background-image: url("jan_kowalski.jpg");
+    -fx-background-size: contain;
+}
+
+#imie{
+    -fx-font-size: 20px;
+}
+
+#info{
+    -fx-font-size: 10px;
+}
+
+/*---REJESTRACJA--*/
+#kalendarz{
+   -fx-pref-width:100px; 
+}
+
+#tableGodziny{
+    -fx-pref-height:150px;
+    -fx-max-width:170px;
+}
+
+/*---REGISTER--*/
+#textSize{
+    -fx-max-width:150px; 
+}
+
+/*---FORGET--*/
+#btnOk{
+    -fx-pref-width:75px;
+}
+
+/*---EDYCJAD---*/
+#edycjad{
+    -fx-background-color: linear-gradient(from 0px 0px to 0px 95px, #0097de 0%, #0097de 40%, white 36.84%, white 100%);
+}
+
+#dni{
+    -fx-font-size:20px;
+}
+
+#d{
+    -fx-text-fill: #0097de;
+}
+
+/*---CHOROBY-----*/
+#tfChoroba{
+    -fx-pref-height:250px;
+}
+
+#comboChoroba{
+    -fx-pref-width:150px;
+}
+
+/*---REGISTER---*/
+#register{
+    -fx-background-color: linear-gradient(from 0px 0px to 0px 1050px, #4baedd 0%, #4baedd 40%, white 36.84%, white 100%);
+}

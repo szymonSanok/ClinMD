@@ -1,0 +1,759 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=System"/>
+    <title>Eksportowana baza: Przychodnia</title>
+    <style type="text/css">
+        table
+        {
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            border-collapse: collapse;
+        }
+        
+        table tr
+        {
+            background-color: white;
+        }
+        
+        table tr.header
+        {
+            background-color: #DDDDDD;
+        }
+        
+        table tr.title
+        {
+            background-color: #EEEEEE;
+        }
+        
+        table tr td
+        {
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+        }
+        
+        table tr td.null
+        {
+            color: #999999;
+            text-align: center;
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+        }
+        
+        table tr td.separator
+        {
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+            background-color: #DDDDDD;
+        }
+        
+        table tr td.rownum
+        {
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+            background-color: #DDDDDD;
+            text-align: right;
+        }
+        
+    </style>
+    <body>
+        <table>
+            <tr class="title">
+                <td colspan="3" align="center">Tabela: Choroby</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdChoroby</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Nazwa</b><br/>VARCHAR (1, 20)
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    Zapalenie P³uc
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="3" align="center">Tabela: Gabinety</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdGabinetu</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Numer</b><br/>VARCHAR (1, 5)
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    101
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>2</i>
+                </td>
+                <td align="right">
+                    2
+                </td>
+                <td align="left">
+                    102
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>3</i>
+                </td>
+                <td align="right">
+                    3
+                </td>
+                <td align="left">
+                    201
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="7" align="center">Tabela: GodzinyPrzyjec</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdGodziny</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>DzienTygodnia</b><br/>INTEGER (1, 7)
+                </td>
+                <td>
+                    <b>GodzinaOd</b><br/>TIME
+                </td>
+                <td>
+                    <b>GodzinaDo</b><br/>TIME
+                </td>
+                <td>
+                    <b>IdPracownika</b><br/>brak typu
+                </td>
+                <td>
+                    <b>IdGabinetu</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="right">
+                    4
+                </td>
+                <td align="left">
+                    11
+                </td>
+                <td align="left">
+                    12
+                </td>
+                <td align="left">
+                    1
+                </td>
+                <td align="left">
+                    2
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="13" align="center">Tabela: Pacjenci</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdPacjenta</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Imie</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Nazwisko</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>PESEL</b><br/>VARCHAR (11, 11)
+                </td>
+                <td>
+                    <b>Ulica</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Miasto</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>KodPocztowy</b><br/>VARCHAR (6, 6)
+                </td>
+                <td>
+                    <b>Wojewodztwo</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Telefon</b><br/>VARCHAR (9, 9)
+                </td>
+                <td>
+                    <b>CzyUbezpieczony</b><br/>BOOLEAN
+                </td>
+                <td>
+                    <b>NrPolisy</b><br/>VARCHAR (1, 30)
+                </td>
+                <td>
+                    <b>IdLekarzaRodzinnego</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    Andrzej
+                </td>
+                <td align="left">
+                    Nowacki
+                </td>
+                <td align="left">
+                    89235154932
+                </td>
+                <td align="left">
+                    Stara
+                </td>
+                <td align="left">
+                    Krosno
+                </td>
+                <td align="left">
+                    34-930
+                </td>
+                <td align="left">
+                    podkarpackie
+                </td>
+                <td align="left">
+                    643940275
+                </td>
+                <td align="left">
+                    true
+                </td>
+                <td align="left">
+                    3245235134
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>2</i>
+                </td>
+                <td align="right">
+                    2
+                </td>
+                <td align="left">
+                    Maria
+                </td>
+                <td align="left">
+                    Kowal
+                </td>
+                <td align="left">
+                    78939201235
+                </td>
+                <td align="left">
+                    Przelotowa
+                </td>
+                <td align="left">
+                    Zagórz
+                </td>
+                <td align="left">
+                    38-500
+                </td>
+                <td align="left">
+                    podkarpackie
+                </td>
+                <td align="left">
+                    892039475
+                </td>
+                <td align="left">
+                    false
+                </td>
+                <td align="left">
+                    32423423423
+                </td>
+                <td align="left">
+                    2
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="12" align="center">Tabela: PersonelMedyczny</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdPracownika</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Imie</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Nazwisko</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>PESEL</b><br/>VARCHAR (11, 11)
+                </td>
+                <td>
+                    <b>Ulica</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Miasto</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>KodPocztowy</b><br/>VARCHAR (6, 6)
+                </td>
+                <td>
+                    <b>Wojewodztwo</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Telefon</b><br/>VARCHAR (9, 9)
+                </td>
+                <td>
+                    <b>DataZatrudnienia</b><br/>DATE
+                </td>
+                <td>
+                    <b>IdSpecjalizacji</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    Jan
+                </td>
+                <td align="left">
+                    Kowalski
+                </td>
+                <td align="left">
+                    94071707056
+                </td>
+                <td align="left">
+                    B³onie
+                </td>
+                <td align="left">
+                    Sanok
+                </td>
+                <td align="left">
+                    38-500
+                </td>
+                <td align="left">
+                    podkarpackie
+                </td>
+                <td align="left">
+                    888000999
+                </td>
+                <td align="left">
+                    2000-12-01
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>2</i>
+                </td>
+                <td align="right">
+                    2
+                </td>
+                <td align="left">
+                    Anna
+                </td>
+                <td align="left">
+                    Nowak
+                </td>
+                <td align="left">
+                    96032913435
+                </td>
+                <td align="left">
+                    Cicha
+                </td>
+                <td align="left">
+                    Rzeszów
+                </td>
+                <td align="left">
+                    35-600
+                </td>
+                <td align="left">
+                    podkarpackie
+                </td>
+                <td align="left">
+                    555939212
+                </td>
+                <td align="left">
+                    2006-11-21
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="5" align="center">Tabela: PrzypisaneLeki</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdPrzypLek</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Data</b><br/>DATE
+                </td>
+                <td>
+                    <b>Leki</b><br/>VARCHAR (1, 100)
+                </td>
+                <td>
+                    <b>IdPacjenta</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    2016-11-29
+                </td>
+                <td align="left">
+                    antybiotyk
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="6" align="center">Tabela: RozpoznaneChoroby</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdRozpChor</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Informacje</b><br/>VARCHAR (1, 100)
+                </td>
+                <td>
+                    <b>Data</b><br/>DATE
+                </td>
+                <td>
+                    <b>IdPacjenta</b><br/>brak typu
+                </td>
+                <td>
+                    <b>IdChoroby</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    lekka odmiana zapalenia p³uc
+                </td>
+                <td align="left">
+                    2016-11-29
+                </td>
+                <td align="left">
+                    1
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="3" align="center">Tabela: Specjalizacje</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdSpecjalizacji</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Nazwa</b><br/>VARCHAR (1, 20)
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    Pediatra
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="4" align="center">Tabela: Uprawnienia</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdUprawnien</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>IdSpecjalizacji</b><br/>brak typu
+                </td>
+                <td>
+                    <b>IdZabiegu</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    1
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="7" align="center">Tabela: Zabiegi</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdZabiegu</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Nazwa</b><br/>VARCHAR (1, 20)
+                </td>
+                <td>
+                    <b>Cena</b><br/>DOUBLE
+                </td>
+                <td>
+                    <b>CzyRefundowane</b><br/>BOOLEAN
+                </td>
+                <td>
+                    <b>CzyWymagaSkierowania</b><br/>BOOLEAN
+                </td>
+                <td>
+                    <b>CzasTrwania</b><br/>DOUBLE
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    Przeœwietlenie
+                </td>
+                <td align="right">
+                    150
+                </td>
+                <td align="left">
+                    true
+                </td>
+                <td align="left">
+                    true
+                </td>
+                <td align="right">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="4" align="center">Tabela: ZabiegiWgabinetach</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdZabWgab</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>IdGabinetu</b><br/>brak typu
+                </td>
+                <td>
+                    <b>IdZabiegu</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    2
+                </td>
+                <td align="left">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="7" align="center">Tabela: ZabiegiZaplanowane</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>IdZabiegu</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Data</b><br/>DATE
+                </td>
+                <td>
+                    <b>Godzina</b><br/>INTEGER (0, 23)
+                </td>
+                <td>
+                    <b>CzySieOdbyl</b><br/>BOOLEAN
+                </td>
+                <td>
+                    <b>IdPracownika</b><br/>brak typu
+                </td>
+                <td>
+                    <b>IdPacjenta</b><br/>brak typu
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    2016-11-29
+                </td>
+                <td align="right">
+                    11
+                </td>
+                <td align="left">
+                    true
+                </td>
+                <td align="left">
+                    1
+                </td>
+                <td align="left">
+                    2
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td align="center" colspan="3">Indeks: <b>IdPracownika</b></td>
+            </tr>
+            <tr>
+                <td align="right" class="rownum">Dla tabeli:</td>
+                <td colspan="2">PersonelMedyczny</td>
+            </tr>
+            <tr>
+                <td align="right" class="rownum">Unikalny:</td>
+                <td colspan="2">Tak</td>
+            </tr>
+            <tr class="header">
+                <td><b>Kolumna</b></td>
+                <td><b>Zestawienie</b></td>
+                <td><b>Sortowanie</b></td>
+            </tr>
+            <tr>
+                <td>IdPracownika</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">ASC</td>
+            </tr>
+        </table>
+        <br/><br/>
+        <i>Dokument wygenerowany przez SQLiteStudio v3.1.1 dnia Wt lis 29 16:51:23 2016</i>
+    </body>
+</html>

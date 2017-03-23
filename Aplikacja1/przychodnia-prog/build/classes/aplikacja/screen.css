@@ -1,0 +1,51 @@
+.root{
+    -fx-background-image: url("bg-top-repeat2.gif");
+}
+.label{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    
+}
+
+#btnLogin{
+    -fx-background-color: linear-gradient(#e19f5b,#b87126);
+    -fx-text-fill: #334c59;
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(#b87126,#e19f5b);
+    -fx-text-fill: #334c59;
+}
+.button:pressed{
+    -fx-background-color: linear-gradient(#97663c,#8e501a);
+    -fx-text-fill: #334c59;
+}
+
+#notification{
+    -fx-text-fill: red;
+}
+/*---PACJENT---*/
+#btnPacjent{
+    -fx-pref-width:150px;
+}
+
+
+/*---REJESTRACJA--*/
+#kalendarz{
+   -fx-pref-width:100px; 
+}
+
+#tableGodziny{
+    -fx-pref-height:150px;
+}
+
+/*---REGISTER--*/
+#textSize{
+    -fx-max-width:150px; 
+}
+
+/*---FORGET--*/
+#btnOk{
+    -fx-pref-width:75px;
+}
